@@ -262,7 +262,10 @@
         /* Dropdown Select */
         .select-group {
             display: flex;
-            gap: 16px;
+            gap: 24px; 
+            align-items: flex-end; 
+            justify-content: space-between;
+            margin-top: 8px;
         }
 
         .select-wrapper {
@@ -273,7 +276,6 @@
             font-size: 13px;
             color: #666;
             margin-bottom: 8px;
-            display: block;
         }
 
         .select-input {
@@ -425,7 +427,7 @@
         <div class="user-profile" onclick="window.location.href='profile.html'">
             <div class="user-avatar">👤</div>
             <div class="user-info">
-                <div class="user-name" id="profileName">Ranz Cuarto</div>
+                <div class="user-name" id="profileName">Username</div>
                 <div class="user-role">Profile</div>
             </div>
         </div>
@@ -583,7 +585,7 @@
             const profile = localStorage.getItem('sleepTrackerProfile');
             if (profile) {
                 const profileData = JSON.parse(profile);
-                document.getElementById('profileName').textContent = profileData.name || 'Ranz Cuarto';
+                document.getElementById('profileName').textContent = profileData.name || 'Username';
             }
         }
 
